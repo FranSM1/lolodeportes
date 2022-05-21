@@ -5,7 +5,7 @@ let contenedorProductos = $("#contenedor_productos");
 muestraProductos(productos);
 
 function muestraProductos(productos) {
-  contenedorProductos.innerHTML = "";
+  contenedorProductos.html("");
 
   for (const producto of productos) {
     contenedorProductos.append(`
@@ -14,7 +14,7 @@ function muestraProductos(productos) {
                 <div class="info_producto">
                     <p class="producto_descripcion">${producto.desc}</p>
                     <p class="producto-precio">$${producto.precio}</p>
-                    <button onclick=agregarAlCarrito(${producto.id}) class="boton-comprar">Agregar producto</button>
+                    <button onclick=agregarAlCarrito(${producto.id}) class="boton-comprar">Agregar Producto</button>
                 </div>
             </div>
             `);
